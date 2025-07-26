@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "865343640918",
+    "project_id": "travelapp-f978c",
+    "storage_bucket": "travelapp-f978c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865343640918:android:bec694d10214785678b2f7",
+        "android_client_info": {
+          "package_name": "com.example.travelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865343640918-vlu02r3gn8ccnlej73bornug97hhhp52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC84Xqyi7ty4xDY7kfYSXpfRPcO7rFLdMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865343640918-vlu02r3gn8ccnlej73bornug97hhhp52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865343640918:android:806c1d07fdf21f4a78b2f7",
+        "android_client_info": {
+          "package_name": "com.example.trip_vault"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865343640918-vlu02r3gn8ccnlej73bornug97hhhp52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC84Xqyi7ty4xDY7kfYSXpfRPcO7rFLdMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865343640918-vlu02r3gn8ccnlej73bornug97hhhp52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

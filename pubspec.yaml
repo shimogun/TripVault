@@ -1,0 +1,87 @@
+name: trip_vault
+description: "A Flutter application for travel management - TripVault"
+publish_to: 'none' # このパッケージは公開しない
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# 依存関係の設定
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI関連
+  cupertino_icons: ^1.0.6
+
+  # Firebase関連
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  cloud_firestore: ^4.13.6
+  firebase_storage: ^11.5.6
+  firebase_messaging: ^14.7.10
+
+  # 通知関連
+  flutter_local_notifications: ^17.0.0
+  timezone: ^0.9.2
+
+  # Google認証
+  google_sign_in: ^6.1.6
+
+  # 地図・位置情報
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
+
+  # 画像・メディア関連
+  image_picker: ^1.0.4
+  cached_network_image: ^3.3.0
+  photo_view: ^0.14.0
+
+  # QRコード関連
+  qr_flutter: ^4.1.0
+  # qr_code_scanner: ^1.0.1  # ビルドエラーのため一時無効化
+  
+  # ファイル・書類関連
+  # file_picker: ^6.1.1  # ビルドエラーのため一時無効化
+  path_provider: ^2.1.1
+
+  # ローカルストレージ・設定
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.0
+  connectivity_plus: ^5.0.0
+
+  # HTTP通信
+  http: ^1.1.0
+  dio: ^5.3.3
+
+  # ユーティリティ
+  intl: ^0.18.1
+  uuid: ^4.2.1
+
+  # 状態管理
+  provider: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # コード品質
+  flutter_lints: ^3.0.0
+
+# Flutter設定
+flutter:
+  uses-material-design: true
+
+  # アセット（画像・フォントなど）
+  # assets:
+  #   - images/
+
+  # フォント設定
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
