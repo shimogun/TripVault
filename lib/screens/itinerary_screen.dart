@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../models/trip_models.dart';
+import '../models/trip_info.dart';
 import '../constants/app_constants.dart';
 import '../constants/app_theme.dart';
+import '../widgets/editable_trip_header.dart';
 
 class ItineraryScreen extends StatefulWidget {
   const ItineraryScreen({super.key});
@@ -17,6 +19,28 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
   String _newLocation = '';
   String _selectedFilter = 'all'; // all, me, group
 
+  late TripInfo _tripInfo;
+
+  @override
+  void initState() {
+    super.initState();
+    _tripInfo = TripInfo(
+      id: 'trip_001',
+      title: 'バリ島旅行',
+      destination: 'バリ島、インドネシア',
+      startDate: DateTime(2026, 3, 15),
+      endDate: DateTime(2026, 3, 18),
+      budgetPerPerson: 200000,
+      participantCount: 4,
+    );
+  }
+
+  void _onTripInfoChanged(TripInfo newTripInfo) {
+    setState(() {
+      _tripInfo = newTripInfo;
+    });
+    // TODO: 実際のアプリではここでFirestoreに保存
+  }
 
   List<PackingItem> _packingItems = [
     PackingItem(id: 1, name: 'パスポート', category: '必需品'),
@@ -237,36 +261,9 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
       body: Column(
         children: [
           // Header section
-          Container(
-            padding: const EdgeInsets.all(16),
-            color: AppTheme.primaryColor.withValues(alpha: 0.1),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  AppStrings.itineraryTab,
-                  style: AppTextStyles.h2,
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    const Icon(Icons.flight, size: 16, color: AppTheme.textSecondary),
-                    const SizedBox(width: 4),
-                    const Text(
-                      '2026年3月15日〜18日',
-                      style: TextStyle(color: AppTheme.textSecondary),
-                    ),
-                    const SizedBox(width: 16),
-                    const Icon(Icons.attach_money, size: 16, color: AppTheme.textSecondary),
-                    const SizedBox(width: 4),
-                    const Text(
-                      '予算: ¥200,000/人',
-                      style: TextStyle(color: AppTheme.textSecondary),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          EditableTripHeader(
+            tripInfo: _tripInfo,
+            onTripInfoChanged: _onTripInfoChanged,
           ),
           // Filter section
           Container(
